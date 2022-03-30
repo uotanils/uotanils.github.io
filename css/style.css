@@ -22,10 +22,70 @@ html {
   display: none;
 }
 
+
+/*
+    keyframes
+*/
+@keyframes fadeup {
+  from {
+  opacity: 0;
+  transform: translateY(20px);
+  }
+  to {
+  opacity: 1;
+  transform: translateY(0);
+  }
+}
+@keyframes fadedown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+/*
+   きらっ
+*/
+@keyframes shiny {
+  0% {
+      transform: scale(0) rotate(25deg);
+      opacity: 0;
+  }
+
+  50% {
+      transform: scale(1) rotate(25deg);
+      opacity: 1;
+  }
+
+  100% {
+      transform: scale(50) rotate(25deg);
+      opacity: 0;
+  }
+}
+
+/*fadeup*/
+.fade-layer, h2, .menuBoxWrapper{
+  animation-name: fadeup;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+/*fadedown*/
+.h1{
+  animation-name: fadedown;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+
 body {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     background-color: #E3748C;
     background-image: url("/img/bg_border.png");
+    overflow: hidden;
 }
 
 .fade-layer {
@@ -37,11 +97,15 @@ body {
     background-position: center  40%;
     position : absolute;
     z-index: -1;
-    opacity : 0;
+    opacity: 0;
+    animation-delay: 1s;
 }
+
 h1 {
     padding: 2vw;
     text-align: center;
+    opacity: 0;
+    animation-delay: 0.5s;
 }
 h1 img {
     width: 25vh;
@@ -55,6 +119,8 @@ section {
 h2 {
     padding: 2vw;
     text-align: center;
+    opacity: 0;
+    animation-delay: 1.5s;
 }
 h2 img {
     width: 90%;
@@ -73,6 +139,8 @@ h2 img {
     text-align: center;
     background-color: rgba(255,255,255,0.8);
     border-radius: 10px;
+    opacity: 0;
+    animation-delay: 2s;
 }
 .menuBox ul {
     display: flex;
@@ -101,27 +169,6 @@ h3 {
 
 .linkBox {
   width: 100%;
-}
-
-
-/*
-   きらっ
-*/
-@keyframes shiny {
-  0% {
-      transform: scale(0) rotate(25deg);
-      opacity: 0;
-  }
-
-  50% {
-      transform: scale(1) rotate(25deg);
-      opacity: 1;
-  }
-
-  100% {
-      transform: scale(50) rotate(25deg);
-      opacity: 0;
-  }
 }
 
 .btnKira {
