@@ -74,7 +74,7 @@ html {
 }
 
 /*fadedown*/
-.h1{
+h1 {
   animation-name: fadedown;
   animation-duration: 2s;
   animation-fill-mode: forwards;
