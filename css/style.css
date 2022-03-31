@@ -465,6 +465,7 @@ button.btn {
 }
 
 a.btn-gradient {
+  position: relative;
   font-weight: normal;
   color: #fff;
   border-radius: 0;
