@@ -25,6 +25,14 @@ html {
 /*
     keyframes
 */
+@keyframes fadein {
+  from {
+  opacity: 0;
+  }
+  to {
+  opacity: 1;
+  }
+}
 @keyframes fadeup {
   from {
   opacity: 0;
@@ -65,8 +73,14 @@ html {
   }
 }
 
+/*fadein*/
+.stars {
+  animation-name: fadein;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
 /*fadeup*/
-.fade-layer, h2, .menuBoxWrapper{
+.fade-layer, h2, .menuBoxWrapper {
   animation-name: fadeup;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -86,6 +100,215 @@ body {
     background-image: url("/img/bg_border.png");
     overflow: hidden;
 }
+
+
+/*
+   ほしきら1
+*/
+.starl {
+  overflow: hidden;
+}
+.star { position : absolute;
+  /*
+  top : 0;
+  left : 50%;
+  transform: translateX(-50%);
+  */
+  width : 100%;
+  height : 100vh;
+  animation: star 2.5s ease-in infinite;
+  background-repeat: no-repeat;
+}
+.star1 {
+  background-image: url(/img/bg_star1.png);
+  background-position: 16% 3%;
+}
+.star2 {
+  background-image: url(/img/bg_star2.png);
+  background-position: 89% 14%;
+  animation-delay: .8s;
+}
+.star3 {
+  background-image: url(/img/bg_star3.png);
+  background-position: 86% 17%;
+  animation-delay: 1.7s;
+  transform: scale(-1, 1);
+}
+.star4 {
+  background-image: url(/img/bg_star3.png);
+  background-position: 80% 8%;
+  animation-delay: .5s;
+}
+.star5 {
+  background-image: url(/img/bg_star2.png);
+  background-position: 2% 57%;
+  animation-delay: .4s;
+  transform: scale(-1, 1);
+}
+.star6 {
+  background-image: url(/img/bg_star1.png);
+  background-position: -1% 73%;
+  animation-delay: .3s;
+}
+.star7 {
+  background-image: url(/img/bg_star3.png);
+  background-position: 10% 79%;
+  animation-delay: .6s;
+}
+.star8 {
+  background-image: url(/img/bg_star2.png);
+  background-position: 6% 12%;
+  animation-delay: .5s;
+}
+.star9 {
+  background-image: url(/img/bg_star1.png);
+  background-position: -2% 80%;
+  animation-delay: .8s;
+  transform: scale(-1, 1);
+}
+.star10 {
+  background-image: url(/img/bg_star4.png);
+  background-position: 87% 3%;
+  animation-delay: .1s;
+}
+.star11 {
+  background-image: url(/img/bg_star4.png);
+  background-position: -2% 8%;
+  animation-delay: 1.2s;
+  transform: scale(-1, 1);
+}
+.star12 {
+  background-image: url(/img/bg_star4.png);
+  background-position: 2% 8%;
+  animation-delay: 1.2s;
+}
+.star13 {
+  background-image: url(/img/bg_star4.png);
+  background-position: 98% 95%;
+  animation-delay: .4s;
+}
+.star14 {
+  background-image: url(/img/bg_star4.png);
+  background-position: 98% 90%;
+  animation-delay: .8s;
+  transform: scale(-1, 1);
+}
+@keyframes star {
+  10% { opacity: 0 }
+  90% { opacity: 1 }
+}
+
+
+/*
+   ほしきら2
+*/
+.container{
+  /*
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.stars{
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height:100%;
+}
+
+.stars span{
+  position:relative;
+}
+
+.stars span:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  
+  /*星のサイズ調節*/
+  transform:scale(0.20);
+}
+
+.stars span.s:before{
+  
+   /*20px 20pxが中央*/
+  box-shadow: 20px 20px #FFFFFF;
+}
+
+.stars span.m:before{
+  box-shadow: 
+    /*1段目*/
+    20px 10px #FFFFFF,
+    /*2段目*/
+    10px 20px #FFFFFF,
+    20px 20px #FFFFFF,
+    30px 20px #FFFFFF,
+    /*3段目*/
+    20px 30px #FFFFFF
+}
+
+.stars span.l:before{
+  box-shadow: 
+    /*0段目*/
+    20px  0px #FFFFFF,
+    /*1段目*/
+    20px 10px #FFFFFF,
+    /*2段目*/
+     0px 20px #FFFFFF,
+    10px 20px #FFFFFF,
+    20px 20px #FFFFFF,
+    30px 20px #FFFFFF,
+    40px 20px #FFFFFF,
+    /*3段目*/
+    20px 30px #FFFFFF,
+    /*4段目*/
+    20px 40px #FFFFFF;
+}
+
+
+ /*
+星の位置とアニメーション指定
+最初の秒はアニメーション時間、2つ目は開始までの時間
+*/
+.stars .s1{left:10%; top:10%; animation: star-anim 8s 0s infinite;}
+.stars .s2{left:80%; top:20%; animation: star-anim 6s 1s infinite;}
+.stars .s3{left:60%; top:40%; animation: star-anim 5s 2s infinite;}
+.stars .s4{left:20%; top:70%; animation: star-anim 7s 3s infinite;}
+.stars .s5{left:80%; top:80%; animation: star-anim 7s 4s infinite;}
+
+.stars .m6{left:40%; top:10%; animation: star-anim 4s 0s infinite;}
+.stars .m7{left:10%; top:50%; animation: star-anim 7s 1s infinite;}
+.stars .m8{left:50%; top:50%; animation: star-anim 8s 2s infinite;}
+.stars .m9{left:90%; top:90%; animation: star-anim 5s 3s infinite;}
+.stars .m10{left:80%; top:50%; animation: star-anim 7s 4s infinite;}
+
+.stars .l11{left:90%; top:10%; animation: star-anim 5s 0s infinite;}
+.stars .l12{left:10%; top:80%; animation: star-anim 6s 1s infinite;}
+.stars .l13{left:30%; top:20%; animation: star-anim 7s 2s infinite;}
+.stars .l14{left:60%; top:90%; animation: star-anim 8s 3s infinite;}
+.stars .l15{left:80%; top:50%; animation: star-anim 7s 4s infinite;}
+
+/*アニメーションキーフレーム*/
+@keyframes star-anim {
+  0% {opacity:0;}
+  5% {opacity:1;}
+  10% {opacity:0;}
+  55% {opacity:0;}
+  60% {opacity:1;}
+  95% {opacity:0;}
+  100% {opacity:1;}
+}
+
+/*
+   ほしきらend
+*/
 
 .fade-layer {
     width: 100%;
@@ -107,7 +330,7 @@ h1 {
     animation-delay: 0.5s;
 }
 h1 img {
-    width: 25vh;
+    width: 20vh;
 }
 section {
   position: absolute;
@@ -122,7 +345,7 @@ h2 {
     animation-delay: 2s;
 }
 h2 img {
-    width: 90%;
+    width: 70%;
 }
 
 /*
@@ -149,10 +372,13 @@ h2 img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 4vw 4vw;
+    margin: 0 4vw 2vw;
     padding: 4vw;
     text-align: center;
     background-color: rgba(255,255,255,0.8);
+    background: -moz-linear-gradient(rgba(255,255,255,0.7) 30%,rgba(255,255,255,0));
+    background: -webkit-linear-gradient(rgba(255,255,255,0.7) 30%,rgba(255,255,255,0));
+    background: linear-gradient(rgba(255,255,255,0.7) 30%,rgba(255,255,255,0));
     border-radius: 10px;
     opacity: 0;
     animation-delay: 2.5s;
@@ -216,12 +442,12 @@ h3 {
 .btn,
 a.btn,
 button.btn {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
   line-height: 1.5;
   position: relative;
   display: inline-block;
-  padding: 1rem 4rem;
+  padding: 0.5rem 2rem;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -251,6 +477,7 @@ a.btn-gradient {
   background-image: -webkit-linear-gradient(left, #E3748C 40%, #562b7c 100%);
   background-image: linear-gradient(90deg, #E3748C 40%, #562b7c 100%);
   border-radius: 100vh;
+  overflow: hidden;
 }
 
 a.btn-gradient:after {
@@ -306,7 +533,7 @@ a.btn-gradient:hover:after {
   }
   .fade-layer {
     background-size: cover;
-    background-position: center 7vh;
+    background-position: center 4vh;
   }
   h2 {
     padding: 1vh;
@@ -329,11 +556,37 @@ a.btn-gradient:hover:after {
 @media only screen and (min-width:681px) {
   .fade-layer {
     background-size: contain;
+    background-position: center 4vh;
+  }
+  /*
+   グラデーション
+*/
+  .btn,
+  a.btn,
+  button.btn {
+    font-size: 1.6rem;
+    padding: 1rem 4rem;
   }
 }
 
-@media only screen and (min-width:1025px) {
-
+@media only screen and (min-width:1024px) {
+/*
+  ほしきら1
+*/
+  .star { position : absolute;
+    width: 860px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+/*
+白背景
+*/
+  .menuBoxWrapper {
+    max-width: 400px;
+  }
 }
 
 
