@@ -653,6 +653,7 @@ a.btn-gradient:hover:after {
   .linkBox2 .btnStar {
     width: 210px;
     height: 220px;
+    padding-left: 8px;
     font-size: 1.6rem;
   }
 }
