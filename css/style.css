@@ -311,26 +311,53 @@ body {
 */
 
 .fade-layer {
-    width: 100%;
-    height: 100%;
-    background-image: url("/img/bg_liosta.png");
-    background-size: 160%;
-    background-repeat: no-repeat;
-    background-position: center  40%;
-    position : absolute;
-    z-index: -1;
-    opacity: 0;
-    animation-delay: 1s;
+  width: 100%;
+  height: 100%;
+  position : absolute;
+  z-index: -1;
+  opacity: 0;
+  animation-delay: 1s;
+}
+.liosta {
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/bg_liosta1.png");
+  background-size: 160%;
+  background-repeat: no-repeat;
+  background-position: center  40%;
+  animation-name: mabataki;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 3s;
+}
+/*アニメーションキーフレーム*/
+@keyframes mabataki {
+  0% {background-image: url("/img/bg_liosta1.png");}
+  45% {background-image: url("/img/bg_liosta1.png");}
+  46% {background-image: url("/img/bg_liosta2.png");}
+  47% {background-image: url("/img/bg_liosta3.png");}
+  48% {background-image: url("/img/bg_liosta4.png");}
+  49% {background-image: url("/img/bg_liosta3.png");}
+  50% {background-image: url("/img/bg_liosta2.png");}
+  51% {background-image: url("/img/bg_liosta1.png");}
+  55% {background-image: url("/img/bg_liosta1.png");}
+  56% {background-image: url("/img/bg_liosta2.png");}
+  57% {background-image: url("/img/bg_liosta3.png");}
+  58% {background-image: url("/img/bg_liosta4.png");}
+  59% {background-image: url("/img/bg_liosta3.png");}
+  60% {background-image: url("/img/bg_liosta2.png");}
+  61% {background-image: url("/img/bg_liosta1.png");}
 }
 
 h1 {
-    padding: 2vw;
-    text-align: center;
-    opacity: 0;
-    animation-delay: 0.5s;
+  padding: 2vw;
+  text-align: center;
+  opacity: 0;
+  animation-delay: 0.5s;
 }
 h1 img {
-    width: 20vh;
+  width: 20vh;
 }
 section {
   position: absolute;
@@ -340,13 +367,13 @@ section {
   overflow: hidden;
 }
 h2 {
-    padding: 2vw;
-    text-align: center;
-    opacity: 0;
-    animation-delay: 2s;
+  padding: 2vw;
+  text-align: center;
+  opacity: 0;
+  animation-delay: 2s;
 }
 h2 img {
-    width: 80%;
+  width: 80%;
 }
 
 /*
@@ -593,7 +620,7 @@ a.btn-gradient:hover:after {
   .sp {
     display: none;
   }
-  .fade-layer {
+  .liosta {
     background-size: cover;
     background-position: center 4vh;
   }
@@ -624,7 +651,7 @@ a.btn-gradient:hover:after {
   }
 }
 @media only screen and (min-width:681px) {
-  .fade-layer {
+  .liosta {
     background-size: contain;
     background-position: center 4vh;
   }
