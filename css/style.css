@@ -525,9 +525,9 @@ body {
 @keyframes lion1 {
   0% {opacity: 0;}
 
-  77% {opacity: 0;}
-  78% {opacity: 1;}
-  79% {opacity: 0;}
+  87% {opacity: 0;}
+  88% {opacity: 1;}
+  89% {opacity: 0;}
 
   100% {opacity: 0;}
 }
@@ -604,10 +604,11 @@ body {
   68% {opacity: 1;}
   69% {opacity: 0;}
   75% {opacity: 0;}
-  76% {opacity: 1;}
-  77% {opacity: 0;}
-  78% {opacity: 1;}
-  79% {opacity: 0;}
+  85% {opacity: 0;}
+  86% {opacity: 1;}
+  87% {opacity: 0;}
+  88% {opacity: 1;}
+  89% {opacity: 0;}
   100% {opacity: 0;}
 }
 @keyframes lion3 {
@@ -615,9 +616,9 @@ body {
   66% {opacity: 0;}
   67% {opacity: 1;}
   68% {opacity: 0;}
-  76% {opacity: 0;}
-  77% {opacity: 1;}
-  78% {opacity: 0;}
+  86% {opacity: 0;}
+  87% {opacity: 1;}
+  88% {opacity: 0;}
   100% {opacity: 0;}
 }
 
