@@ -379,18 +379,22 @@ body {
 .liosta1 {
   background-image: url("/img/bg_liosta1.png");
   animation-name: liosta1;
+  opacity: 0;
 }
 .liosta2 {
   background-image: url("/img/bg_liosta2.png");
   animation-name: liosta2;
+  opacity: 0;
 }
 .liosta3 {
   background-image: url("/img/bg_liosta3.png");
   animation-name: liosta3;
+  opacity: 0;
 }
 .liosta4 {
   background-image: url("/img/bg_liosta4.png");
   animation-name: liosta4;
+  opacity: 0;
 }
 @keyframes liosta1 {
   0% {opacity: 1;}
