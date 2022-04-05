@@ -354,7 +354,7 @@ body {
 */
 
 
-/* 複数の背景画像でアニメ*/
+/* 複数の背景画像でアニメ リオスタ同時まばたき
 .mabatakiWrapper {
   position: relative;
   width: 100%;
@@ -379,22 +379,18 @@ body {
 .liosta1 {
   background-image: url("/img/bg_liosta1.png");
   animation-name: liosta1;
-  opacity: 0;
 }
 .liosta2 {
   background-image: url("/img/bg_liosta2.png");
   animation-name: liosta2;
-  opacity: 0;
 }
 .liosta3 {
   background-image: url("/img/bg_liosta3.png");
   animation-name: liosta3;
-  opacity: 0;
 }
 .liosta4 {
   background-image: url("/img/bg_liosta4.png");
   animation-name: liosta4;
-  opacity: 0;
 }
 @keyframes liosta1 {
   0% {opacity: 1;}
@@ -451,6 +447,179 @@ body {
   100% {opacity: 0;}
 }
 
+*/
+
+
+
+/* 複数の背景画像でアニメ　リオスタばらばらまばたき*/
+.mabatakiWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/bg_liosta1.png");
+  background-size: 160%;
+  background-repeat: no-repeat;
+  background-position: center  40%;
+}
+.mabataki {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 160%;
+  background-repeat: no-repeat;
+  background-position: center  40%;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+}
+/* まばたきの間　統合ver 
+.liosta1 {
+  background-image: url("/img/bg_liosta1.png");
+  animation-name: liosta1;
+}
+@keyframes liosta1 {
+  0% {opacity: 1;}
+
+  25% {opacity: 1;}
+  26% {opacity: 0;}
+  30% {opacity: 0;}
+  31% {opacity: 1;}
+  35% {opacity: 1;}
+  36% {opacity: 0;}
+  40% {opacity: 0;}
+  41% {opacity: 1;}
+
+
+  77% {opacity: 1;}
+  78% {opacity: 0;}
+  79% {opacity: 1;}
+
+  100% {opacity: 1;}
+}
+*/
+
+/* まばたきの間　個別ver */
+.stan1 {
+  background-image: url("/img/bg_stan1.png");
+  animation-name: stan1;
+}
+.lion1 {
+  background-image: url("/img/bg_lion1.png");
+  animation-name: lion1;
+}
+@keyframes stan1 {
+  0% {opacity: 0;}
+
+  25% {opacity: 0;}
+  26% {opacity: 1;}
+  30% {opacity: 1;}
+  31% {opacity: 0;}
+  35% {opacity: 0;}
+  36% {opacity: 1;}
+  40% {opacity: 1;}
+  41% {opacity: 0;}
+
+  100% {opacity: 0;}
+}
+@keyframes lion1 {
+  0% {opacity: 0;}
+
+  77% {opacity: 0;}
+  78% {opacity: 1;}
+  79% {opacity: 0;}
+
+  100% {opacity: 0;}
+}
+
+.stan2 {
+  background-image: url("/img/bg_stan2.png");
+  animation-name: stan2;
+}
+.stan3 {
+  background-image: url("/img/bg_stan3.png");
+  animation-name: stan3;
+}
+.stan4 {
+  background-image: url("/img/bg_stan4.png");
+  animation-name: stan4;
+}
+@keyframes stan2 {
+  0% {opacity: 0;}
+  25% {opacity: 0;}
+  26% {opacity: 1;}
+  27% {opacity: 0;}
+  29% {opacity: 0;}
+  30% {opacity: 1;}
+  31% {opacity: 0;}
+  35% {opacity: 0;}
+  36% {opacity: 1;}
+  37% {opacity: 0;}
+  39% {opacity: 0;}
+  40% {opacity: 1;}
+  41% {opacity: 0;}
+  100% {opacity: 0;}
+}
+@keyframes stan3 {
+  0% {opacity: 0;}
+  26% {opacity: 0;}
+  27% {opacity: 1;}
+  28% {opacity: 0;}
+  29% {opacity: 1;}
+  30% {opacity: 0;}
+  36% {opacity: 0;}
+  37% {opacity: 1;}
+  38% {opacity: 0;}
+  39% {opacity: 1;}
+  40% {opacity: 0;}
+  41% {opacity: 0;}
+  100% {opacity: 0;}
+}
+@keyframes stan4 {
+  0% {opacity: 0;}
+  27% {opacity: 0;}
+  28% {opacity: 1;}
+  29% {opacity: 0;}
+  37% {opacity: 0;}
+  38% {opacity: 1;}
+  39% {opacity: 0;}
+  41% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+
+.lion2 {
+  background-image: url("/img/bg_lion2.png");
+  animation-name: lion2;
+}
+.lion3 {
+  background-image: url("/img/bg_lion3.png");
+  animation-name: lion3;
+}
+@keyframes lion2 {
+  0% {opacity: 0;}
+  65% {opacity: 0;}
+  66% {opacity: 1;}
+  67% {opacity: 0;}
+  68% {opacity: 1;}
+  69% {opacity: 0;}
+  75% {opacity: 0;}
+  76% {opacity: 1;}
+  77% {opacity: 0;}
+  78% {opacity: 1;}
+  79% {opacity: 0;}
+  100% {opacity: 0;}
+}
+@keyframes lion3 {
+  0% {opacity: 0;}
+  66% {opacity: 0;}
+  67% {opacity: 1;}
+  68% {opacity: 0;}
+  76% {opacity: 0;}
+  77% {opacity: 1;}
+  78% {opacity: 0;}
+  100% {opacity: 0;}
+}
 
 
 
@@ -494,7 +663,7 @@ h2 img {
 .dot img {
   width: 100%;
 }
-.stan1 {
+.dot_stan1 {
   left: 3vh;
   top: 9.5vh;
   width: 50px;
