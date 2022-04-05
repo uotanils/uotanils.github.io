@@ -318,7 +318,10 @@ body {
   opacity: 0;
   animation-delay: 1s;
 }
-.liosta {
+
+/* １ヶ所の背景画像でアニメ*/
+/*
+.mabataki {
   width: 100%;
   height: 100%;
   background-image: url("/img/bg_liosta1.png");
@@ -331,7 +334,6 @@ body {
   animation-iteration-count: infinite;
   animation-delay: 1s;
 }
-/*アニメーションキーフレーム*/
 @keyframes mabataki {
   0% {background-image: url("/img/bg_liosta1.png");}
   45% {background-image: url("/img/bg_liosta1.png");}
@@ -349,6 +351,105 @@ body {
   60% {background-image: url("/img/bg_liosta2.png");}
   61% {background-image: url("/img/bg_liosta1.png");}
 }
+*/
+
+
+/* 複数の背景画像でアニメ*/
+.mabatakiWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/bg_liosta0.png");
+  background-size: 160%;
+  background-repeat: no-repeat;
+  background-position: center  40%;
+}
+.mabataki {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 160%;
+  background-repeat: no-repeat;
+  background-position: center  40%;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+}
+.liosta1 {
+  background-image: url("/img/bg_liosta1.png");
+  animation-name: liosta1;
+}
+.liosta2 {
+  background-image: url("/img/bg_liosta2.png");
+  animation-name: liosta2;
+}
+.liosta3 {
+  background-image: url("/img/bg_liosta3.png");
+  animation-name: liosta3;
+}
+.liosta4 {
+  background-image: url("/img/bg_liosta4.png");
+  animation-name: liosta4;
+}
+@keyframes liosta1 {
+  0% {opacity: 1;}
+  45% {opacity: 1;}
+  46% {opacity: 0;}
+  50% {opacity: 0;}
+  51% {opacity: 1;}
+  55% {opacity: 1;}
+  56% {opacity: 0;}
+  60% {opacity: 0;}
+  61% {opacity: 1;}
+  100% {opacity: 1;}
+}
+@keyframes liosta2 {
+  0% {opacity: 0;}
+  45% {opacity: 0;}
+  46% {opacity: 1;}
+  47% {opacity: 0;}
+  49% {opacity: 0;}
+  50% {opacity: 1;}
+  51% {opacity: 0;}
+  55% {opacity: 0;}
+  56% {opacity: 1;}
+  57% {opacity: 0;}
+  59% {opacity: 0;}
+  60% {opacity: 1;}
+  61% {opacity: 0;}
+  100% {opacity: 0;}
+}
+@keyframes liosta3 {
+  0% {opacity: 0;}
+  46% {opacity: 0;}
+  47% {opacity: 1;}
+  48% {opacity: 0;}
+  49% {opacity: 1;}
+  50% {opacity: 0;}
+  56% {opacity: 0;}
+  57% {opacity: 1;}
+  58% {opacity: 0;}
+  59% {opacity: 1;}
+  60% {opacity: 0;}
+  61% {opacity: 0;}
+  100% {opacity: 0;}
+}
+@keyframes liosta4 {
+  0% {opacity: 0;}
+  47% {opacity: 0;}
+  48% {opacity: 1;}
+  49% {opacity: 0;}
+  57% {opacity: 0;}
+  58% {opacity: 1;}
+  59% {opacity: 0;}
+  61% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+
+
+
 
 h1 {
   padding: 2vw;
@@ -620,7 +721,7 @@ a.btn-gradient:hover:after {
   .sp {
     display: none;
   }
-  .liosta {
+  .mabatakiWrapper, .mabataki {
     background-size: cover;
     background-position: center 4vh;
   }
@@ -651,7 +752,7 @@ a.btn-gradient:hover:after {
   }
 }
 @media only screen and (min-width:681px) {
-  .liosta {
+  .mabatakiWrapper, .mabataki {
     background-size: contain;
     background-position: center 4vh;
   }
