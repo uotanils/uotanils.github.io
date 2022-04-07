@@ -80,7 +80,7 @@ html {
   animation-fill-mode: forwards;
 }
 /*fadeup*/
-.fade-layer, h2, .menuBoxWrapper, .linkBox2 {
+.fade-layer, h2, .menuBoxWrapper, .linkBox2, .mabatakiWrapper {
   animation-name: fadeup;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -100,6 +100,49 @@ body {
     overflow: hidden;
 }
 
+/* ローディング画面 */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader.is-active {
+  background-color: rgba(227,116,140,1);
+}
+.loaderInner {
+  animation-name: rotate;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.loader-star {
+  animation-name: scale;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes rotate {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+@keyframes scale {
+  0%{
+    transform:scale(1);
+  }
+  50%{
+    transform: scale(0.7);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
 
 /*
    ほしきら1
@@ -460,6 +503,8 @@ body {
   background-size: 160%;
   background-repeat: no-repeat;
   background-position: center  40%;
+  opacity: 0;
+  animation-delay: 1.5s;
 }
 .mabataki {
   position: absolute;
@@ -471,7 +516,7 @@ body {
   animation-duration: 6s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-delay: 1s;
+  animation-delay: 1.5s;
 }
 /* まばたきの間　統合ver 
 .liosta1 {
@@ -513,12 +558,18 @@ body {
 
   25% {opacity: 0;}
   26% {opacity: 1;}
+
   30% {opacity: 1;}
   31% {opacity: 0;}
   35% {opacity: 0;}
   36% {opacity: 1;}
   40% {opacity: 1;}
   41% {opacity: 0;}
+
+  93% {opacity: 0;}
+  94% {opacity: 1;}
+  98% {opacity: 1;}
+  99% {opacity: 0;}
 
   100% {opacity: 0;}
 }
@@ -546,44 +597,74 @@ body {
 }
 @keyframes stan2 {
   0% {opacity: 0;}
+
   25% {opacity: 0;}
   26% {opacity: 1;}
   27% {opacity: 0;}
+
   29% {opacity: 0;}
   30% {opacity: 1;}
   31% {opacity: 0;}
+
   35% {opacity: 0;}
   36% {opacity: 1;}
   37% {opacity: 0;}
+
   39% {opacity: 0;}
   40% {opacity: 1;}
   41% {opacity: 0;}
+
+  39% {opacity: 0;}
+  40% {opacity: 1;}
+  41% {opacity: 0;}
+
+  93% {opacity: 0;}
+  94% {opacity: 1;}
+  95% {opacity: 0;}
+
+  98% {opacity: 1;}
+  99% {opacity: 0;}
+
   100% {opacity: 0;}
 }
 @keyframes stan3 {
   0% {opacity: 0;}
+
   26% {opacity: 0;}
   27% {opacity: 1;}
   28% {opacity: 0;}
   29% {opacity: 1;}
   30% {opacity: 0;}
+
   36% {opacity: 0;}
   37% {opacity: 1;}
   38% {opacity: 0;}
   39% {opacity: 1;}
   40% {opacity: 0;}
-  41% {opacity: 0;}
+
+  94% {opacity: 0;}
+  95% {opacity: 1;}
+  96% {opacity: 0;}
+  97% {opacity: 1;}
+  98% {opacity: 0;}
+  
   100% {opacity: 0;}
 }
 @keyframes stan4 {
   0% {opacity: 0;}
+
   27% {opacity: 0;}
   28% {opacity: 1;}
   29% {opacity: 0;}
+
   37% {opacity: 0;}
   38% {opacity: 1;}
   39% {opacity: 0;}
-  41% {opacity: 0;}
+
+  95% {opacity: 0;}
+  96% {opacity: 1;}
+  97% {opacity: 0;}
+
   100% {opacity: 0;}
 }
 
@@ -598,27 +679,32 @@ body {
 }
 @keyframes lion2 {
   0% {opacity: 0;}
+
   65% {opacity: 0;}
   66% {opacity: 1;}
   67% {opacity: 0;}
   68% {opacity: 1;}
   69% {opacity: 0;}
-  75% {opacity: 0;}
+
   85% {opacity: 0;}
   86% {opacity: 1;}
   87% {opacity: 0;}
   88% {opacity: 1;}
   89% {opacity: 0;}
+
   100% {opacity: 0;}
 }
 @keyframes lion3 {
   0% {opacity: 0;}
+
   66% {opacity: 0;}
   67% {opacity: 1;}
   68% {opacity: 0;}
+
   86% {opacity: 0;}
   87% {opacity: 1;}
   88% {opacity: 0;}
+
   100% {opacity: 0;}
 }
 
@@ -629,7 +715,7 @@ h1 {
   padding: 2vw;
   text-align: center;
   opacity: 0;
-  animation-delay: 0.5s;
+  animation-delay: 1s;
 }
 h1 img {
   width: 20vh;
@@ -645,7 +731,7 @@ h2 {
   padding: 2vw;
   text-align: center;
   opacity: 0;
-  animation-delay: 2s;
+  animation-delay: 2.5s;
 }
 h2 img {
   width: 80%;
@@ -683,7 +769,7 @@ h2 img {
   background: linear-gradient(rgba(255,255,255,0.7) 30%,rgba(255,255,255,0));
   border-radius: 10px;
   opacity: 0;
-  animation-delay: 2.5s;
+  animation-delay: 3s;
 }
 .menuBox {
   z-index: 10;
@@ -833,7 +919,7 @@ a.btn-gradient:hover:after {
   transform: rotateZ(-10deg);
 }
 .linkBox2 {
-  animation-delay: 3s;
+  animation-delay: 3.5s;
   opacity: 0;
 }
 
@@ -854,7 +940,7 @@ a.btn-gradient:hover:after {
   animation-name: purupuru_anim;
   animation-duration:7s;
   animation-iteration-count:infinite;
-  animation-delay: 7s;
+  animation-delay: 7,5s;
 }
 .btnStar .txts {
   font-size: 80%;
