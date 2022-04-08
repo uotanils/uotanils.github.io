@@ -667,6 +667,49 @@ body {
 
   100% {opacity: 0;}
 }
+.stan_hiright_wrapper {
+  animation-name: stan_hiright_wrapper;
+  animation-delay: 1.5s;
+}
+@keyframes stan_hiright_wrapper {
+  0% {opacity: 1;}
+
+  25% {opacity: 1;}
+  26% {opacity: 0;}
+
+  30% {opacity: 0;}
+  31% {opacity: 1;}
+  35% {opacity: 1;}
+  36% {opacity: 0;}
+  40% {opacity: 0;}
+  41% {opacity: 1;}
+
+  93% {opacity: 1;}
+  94% {opacity: 0;}
+  98% {opacity: 0;}
+  99% {opacity: 1;}
+
+  100% {opacity: 1;}
+}
+.stan_hiright {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 160%;
+  background-repeat: no-repeat;
+  background-position: center 40%;
+  background-image: url("/img/bg_stan_hiright.png");
+  animation-name: stan_hiright;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 1.5s;
+}
+@keyframes stan_hiright {
+  0% {transform: translate(2px, -2px)}
+  50% {transform: translate(-1px, 1px)}
+  100% {transform: translate(2px, -2px)}
+}
 
 
 .lion2 {
@@ -953,8 +996,7 @@ a.btn-gradient:hover:after {
 .btnStar .txts {
   font-size: 80%;
 }
-
-
+/*
 @keyframes purupuru_anim {
 	0% {	transform: translate(0, 0);}
 	2% {	transform: translate(-5px, -0);}
@@ -963,6 +1005,16 @@ a.btn-gradient:hover:after {
 	8% {	transform: translate(5px, 0);}
 	10% {	transform: translate(-5px, -0);}
 	12% {	transform: translate(0, 0);}
+	100% {	transform: translate(0, 0);}
+}
+*/
+@keyframes purupuru_anim {
+	0% {	transform: rotate(0);}
+	1% {	transform: rotate(-8deg);}
+	2% {	transform: rotate(8deg);}
+	3% {	transform: rotate(-8deg);}
+	4% {	transform: rotate(8deg);}
+	5% {	transform: rotate(0);}
 	100% {	transform: translate(0, 0);}
 }
 
@@ -989,7 +1041,7 @@ a.btn-gradient:hover:after {
   .sp {
     display: none;
   }
-  .mabatakiWrapper, .mabataki {
+  .mabatakiWrapper, .mabataki, .stan_hiright {
     background-size: cover;
     background-position: center 4vh;
   }
@@ -1023,7 +1075,7 @@ a.btn-gradient:hover:after {
   section {
     background-size: 600px;
   }
-  .mabatakiWrapper, .mabataki {
+  .mabatakiWrapper, .mabataki, .stan_hiright {
     background-size: cover;
     background-position: center 4vh;
   }
@@ -1058,7 +1110,7 @@ a.btn-gradient:hover:after {
 }
 
 @media only screen and (min-width:1024px) {
-  .mabatakiWrapper, .mabataki {
+  .mabatakiWrapper, .mabataki, .stan_hiright {
     background-size: contain;
   }
 /*
