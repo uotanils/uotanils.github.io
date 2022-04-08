@@ -80,7 +80,7 @@ html {
   animation-fill-mode: forwards;
 }
 /*fadeup*/
-.fade-layer, h2, .menuBoxWrapper, .linkBox2, .mabatakiWrapper {
+.fade-layer, h2, section, .menuBoxWrapper, .linkBox2, .mabatakiWrapper {
   animation-name: fadeup;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -726,6 +726,12 @@ section {
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
+  background-image: url(/img/footer_star.png);
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  opacity: 0;
+  animation-delay: 2s;
 }
 h2 {
   padding: 2vw;
@@ -763,11 +769,13 @@ h2 img {
   margin: 0 14vw;
   padding: 4vw;
   text-align: center;
+  /*
   background-color: rgba(255,255,255,0.8);
   background: -moz-linear-gradient(rgba(255,255,255,0.7) 30%,rgba(255,255,255,0));
   background: -webkit-linear-gradient(rgba(255,255,255,0.7) 30%,rgba(255,255,255,0));
   background: linear-gradient(rgba(255,255,255,0.7) 30%,rgba(255,255,255,0));
   border-radius: 10px;
+  */
   opacity: 0;
   animation-delay: 3s;
 }
@@ -1012,8 +1020,11 @@ a.btn-gradient:hover:after {
   }
 }
 @media only screen and (min-width:681px) {
+  section {
+    background-size: 600px;
+  }
   .mabatakiWrapper, .mabataki {
-    background-size: contain;
+    background-size: cover;
     background-position: center 4vh;
   }
   /*
@@ -1047,6 +1058,9 @@ a.btn-gradient:hover:after {
 }
 
 @media only screen and (min-width:1024px) {
+  .mabatakiWrapper, .mabataki {
+    background-size: contain;
+  }
 /*
   ほしきら1
 */
