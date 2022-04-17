@@ -142,12 +142,8 @@ body {
 .starl {
   overflow: hidden;
 }
-.star { position : absolute;
-  /*
-  top : 0;
-  left : 50%;
-  transform: translateX(-50%);
-  */
+.star {
+  position : absolute;
   width : 100%;
   height : 100vh;
   animation: star 2.5s ease-in infinite;
@@ -237,12 +233,6 @@ body {
    ほしきら2
 */
 .container{
-  /*
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  position:relative;
-  */
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -345,6 +335,152 @@ body {
    ほしきらend
 */
 
+
+/*
+   ドット
+*/
+.dots {
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.dots .dot {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.dots .dotIn {
+  position: absolute;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/**/
+/*
+.dots .stanWrapper .dotIn {
+  width: 40px;
+  height: 64px;
+  left: 12%;
+  bottom: 6%;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 1.5s;
+}
+*/
+.dots .stanWrapper .dotIn {
+  width: 40px;
+  height: 64px;
+  left: 8%;
+  bottom: 6%;
+  animation-duration: 2.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 1.5s;
+}
+/*
+.dots .stan1 {
+  background-image: url(/img/dot_stan1.png);
+  animation-name: dotStan1;
+}
+@keyframes dotStan1 {
+  0% {opacity:1;}
+  33% {opacity:0;}
+  66% {opacity:0;}
+  100% {opacity:1;}
+}
+*/
+.dots .stan1 {
+  background-image: url(/img/dot_stan2.png);
+  animation-name: dotStan1;
+}
+@keyframes dotStan1 {
+  0% {transform: translate(0px, 0px) rotate(-20deg) scale(-1, 1)}
+  50% {transform: translate(5px, -5px) rotate(-20deg) scale(-1, 1)}
+  100% {transform: translate(0px, 0px) rotate(-20deg) scale(-1, 1)}
+}
+/*
+.dots .stan2 {
+  background-image: url(/img/dot_stan2.png);
+  animation-name: dotStan2;
+}
+@keyframes dotStan2 {
+  0% {opacity:0;}
+  33% {opacity:1;}
+  66% {opacity:0;}
+  100% {opacity:0;}
+}
+.dots .stan3 {
+  background-image: url(/img/dot_stan3.png);
+  animation-name: dotStan3;
+}
+@keyframes dotStan3 {
+  0% {opacity:0;}
+  33% {opacity:0;}
+  66% {opacity:1;}
+  100% {opacity:0;}
+}
+*/
+/**/
+.dots .hitsujiWrapper .dotIn {
+  width: 50px;
+  height: 35px;
+  background-image: url(/img/dot_hitsuji.png);
+  animation-name: hitsuji;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 1.5s;
+}
+@keyframes hitsuji {
+  0% {transform: translate(0px, 0px) scale(-1, 1)}
+  50% {transform: translate(-5px, 5px) scale(-1, 1)}
+  100% {transform: translate(0px, 0px) scale(-1, 1)}
+}
+.dots .hitsuji1 {
+  left: 17%;
+  top: 10%;
+}
+.dots .hitsuji2 {
+  transform: scale(-1, 1);
+  right: 8%;
+  top: 8%;
+}
+
+/*
+.dotIn {
+  position: absolute;
+}
+.dot .stan1 {
+
+}
+.dot .stan2 {
+
+}
+.dot .stan3 {
+
+}
+.dot .hitsuji {
+
+}
+*/
+
+/*アニメーションキーフレーム*/
+@keyframes st {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+
+
+
+
+
+
 .fade-layer {
   width: 100%;
   height: 100%;
@@ -353,138 +489,6 @@ body {
   opacity: 0;
   animation-delay: 1s;
 }
-
-/* １ヶ所の背景画像でアニメ*/
-/*
-.mabataki {
-  width: 100%;
-  height: 100%;
-  background-image: url("/img/bg_liosta1.png");
-  background-size: 160%;
-  background-repeat: no-repeat;
-  background-position: center  40%;
-  animation-name: mabataki;
-  animation-duration: 6s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-delay: 1s;
-}
-@keyframes mabataki {
-  0% {background-image: url("/img/bg_liosta1.png");}
-  45% {background-image: url("/img/bg_liosta1.png");}
-  46% {background-image: url("/img/bg_liosta2.png");}
-  47% {background-image: url("/img/bg_liosta3.png");}
-  48% {background-image: url("/img/bg_liosta4.png");}
-  49% {background-image: url("/img/bg_liosta3.png");}
-  50% {background-image: url("/img/bg_liosta2.png");}
-  51% {background-image: url("/img/bg_liosta1.png");}
-  55% {background-image: url("/img/bg_liosta1.png");}
-  56% {background-image: url("/img/bg_liosta2.png");}
-  57% {background-image: url("/img/bg_liosta3.png");}
-  58% {background-image: url("/img/bg_liosta4.png");}
-  59% {background-image: url("/img/bg_liosta3.png");}
-  60% {background-image: url("/img/bg_liosta2.png");}
-  61% {background-image: url("/img/bg_liosta1.png");}
-}
-*/
-
-
-/* 複数の背景画像でアニメ リオスタ同時まばたき
-.mabatakiWrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-image: url("/img/bg_liosta0.png");
-  background-size: 160%;
-  background-repeat: no-repeat;
-  background-position: center  40%;
-}
-.mabataki {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: 160%;
-  background-repeat: no-repeat;
-  background-position: center  40%;
-  animation-duration: 6s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-delay: 1s;
-}
-.liosta1 {
-  background-image: url("/img/bg_liosta1.png");
-  animation-name: liosta1;
-}
-.liosta2 {
-  background-image: url("/img/bg_liosta2.png");
-  animation-name: liosta2;
-}
-.liosta3 {
-  background-image: url("/img/bg_liosta3.png");
-  animation-name: liosta3;
-}
-.liosta4 {
-  background-image: url("/img/bg_liosta4.png");
-  animation-name: liosta4;
-}
-@keyframes liosta1 {
-  0% {opacity: 1;}
-  45% {opacity: 1;}
-  46% {opacity: 0;}
-  50% {opacity: 0;}
-  51% {opacity: 1;}
-  55% {opacity: 1;}
-  56% {opacity: 0;}
-  60% {opacity: 0;}
-  61% {opacity: 1;}
-  100% {opacity: 1;}
-}
-@keyframes liosta2 {
-  0% {opacity: 0;}
-  45% {opacity: 0;}
-  46% {opacity: 1;}
-  47% {opacity: 0;}
-  49% {opacity: 0;}
-  50% {opacity: 1;}
-  51% {opacity: 0;}
-  55% {opacity: 0;}
-  56% {opacity: 1;}
-  57% {opacity: 0;}
-  59% {opacity: 0;}
-  60% {opacity: 1;}
-  61% {opacity: 0;}
-  100% {opacity: 0;}
-}
-@keyframes liosta3 {
-  0% {opacity: 0;}
-  46% {opacity: 0;}
-  47% {opacity: 1;}
-  48% {opacity: 0;}
-  49% {opacity: 1;}
-  50% {opacity: 0;}
-  56% {opacity: 0;}
-  57% {opacity: 1;}
-  58% {opacity: 0;}
-  59% {opacity: 1;}
-  60% {opacity: 0;}
-  61% {opacity: 0;}
-  100% {opacity: 0;}
-}
-@keyframes liosta4 {
-  0% {opacity: 0;}
-  47% {opacity: 0;}
-  48% {opacity: 1;}
-  49% {opacity: 0;}
-  57% {opacity: 0;}
-  58% {opacity: 1;}
-  59% {opacity: 0;}
-  61% {opacity: 0;}
-  100% {opacity: 0;}
-}
-
-*/
-
-
 
 /* 複数の背景画像でアニメ　リオスタばらばらまばたき*/
 .mabatakiWrapper {
@@ -510,38 +514,13 @@ body {
   animation-iteration-count: infinite;
   animation-delay: 1.5s;
 }
-/* まばたきの間　統合ver 
-.liosta1 {
-  background-image: url("/img/bg_liosta1.png");
-  animation-name: liosta1;
-}
-@keyframes liosta1 {
-  0% {opacity: 1;}
-
-  25% {opacity: 1;}
-  26% {opacity: 0;}
-  30% {opacity: 0;}
-  31% {opacity: 1;}
-  35% {opacity: 1;}
-  36% {opacity: 0;}
-  40% {opacity: 0;}
-  41% {opacity: 1;}
-
-
-  77% {opacity: 1;}
-  78% {opacity: 0;}
-  79% {opacity: 1;}
-
-  100% {opacity: 1;}
-}
-*/
 
 /* まばたきの間　個別ver */
-.stan1 {
+.mabataki.stan1 {
   background-image: url("/img/bg_stan1.png");
   animation-name: stan1;
 }
-.lion1 {
+.mabataki.lion1 {
   background-image: url("/img/bg_lion1.png");
   animation-name: lion1;
 }
@@ -575,15 +554,15 @@ body {
   100% {opacity: 0;}
 }
 
-.stan2 {
+.mabataki.stan2 {
   background-image: url("/img/bg_stan2.png");
   animation-name: stan2;
 }
-.stan3 {
+.mabataki.stan3 {
   background-image: url("/img/bg_stan3.png");
   animation-name: stan3;
 }
-.stan4 {
+.mabataki.stan4 {
   background-image: url("/img/bg_stan4.png");
   animation-name: stan4;
 }
@@ -659,7 +638,7 @@ body {
 
   100% {opacity: 0;}
 }
-.stan_hiright_wrapper {
+.mabataki.stan_hiright_wrapper {
   animation-name: stan_hiright_wrapper;
   animation-delay: 1.5s;
 }
@@ -683,7 +662,7 @@ body {
 
   100% {opacity: 1;}
 }
-.stan_hiright {
+.mabataki.stan_hiright {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -704,11 +683,11 @@ body {
 }
 
 
-.lion2 {
+.mabataki.lion2 {
   background-image: url("/img/bg_lion2.png");
   animation-name: lion2;
 }
-.lion3 {
+.mabataki.lion3 {
   background-image: url("/img/bg_lion3.png");
   animation-name: lion3;
 }
@@ -742,9 +721,6 @@ body {
 
   100% {opacity: 0;}
 }
-
-
-
 
 h1 {
   padding: 2vw;
@@ -782,21 +758,6 @@ h2 img {
     白背景
 */
 
-/*
-    ドット
-*/
-.dot {
-  position: absolute;
-}
-.dot img {
-  width: 100%;
-}
-.dot_stan1 {
-  left: 3vh;
-  top: 9.5vh;
-  width: 50px;
-}
-
 .menuBoxWrapper {
   display: flex;
   flex-wrap: wrap;
@@ -804,13 +765,6 @@ h2 img {
   margin: 0 14vw;
   padding: 4vw;
   text-align: center;
-  /*
-  background-color: rgba(255,255,255,0.8);
-  background: -moz-linear-gradient(rgba(255,255,255,0.7) 30%,rgba(255,255,255,0));
-  background: -webkit-linear-gradient(rgba(255,255,255,0.7) 30%,rgba(255,255,255,0));
-  background: linear-gradient(rgba(255,255,255,0.7) 30%,rgba(255,255,255,0));
-  border-radius: 10px;
-  */
   opacity: 0;
   animation-delay: 3s;
 }
@@ -988,18 +942,6 @@ a.btn-gradient:hover:after {
 .btnStar .txts {
   font-size: 80%;
 }
-/*
-@keyframes purupuru_anim {
-	0% {	transform: translate(0, 0);}
-	2% {	transform: translate(-5px, -0);}
-	4% {	transform: translate(5px, 0);}
-	6% {	transform: translate(-5px, -0);}
-	8% {	transform: translate(5px, 0);}
-	10% {	transform: translate(-5px, -0);}
-	12% {	transform: translate(0, 0);}
-	100% {	transform: translate(0, 0);}
-}
-*/
 @keyframes purupuru_anim {
 	0% {	transform: rotate(0);}
 	1% {	transform: rotate(-8deg);}
@@ -1117,6 +1059,14 @@ a.btn-gradient:hover:after {
   ほしきら1
 */
   .star { position : absolute;
+    width: 860px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  .dots, .dots .dot {
     width: 860px;
     top: 0;
     right: 0;
