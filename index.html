@@ -33,9 +33,6 @@
 <meta property="article:modified_time" content="2022-03-29T09:23:46+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@uotaniLS" />
-<!--
-<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://uotanils.github.io/#website","url":"https://uotanils.github.io/","name":"うおたにリオスタ本部","description":"Just another WordPress site","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://uotanils.github.io/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"ja"},{"@type":"WebPage","@id":"https://uotanils.github.io/#webpage","url":"https://uotanils.github.io/","name":"うおたにリオスタ本部","isPartOf":{"@id":"https://uotanils.github.io/#website"},"datePublished":"2022-03-29T08:35:46+00:00","dateModified":"2022-03-29T09:23:46+00:00","description":"リオスタ大好き♡ アップルグミ感謝祭2様にて、リオスタ合同誌(成人向け)を出します！","breadcrumb":{"@id":"https://uotanils.github.io/#breadcrumb"},"inLanguage":"ja","potentialAction":[{"@type":"ReadAction","target":["https://uotanils.github.io/"]}]},{"@type":"BreadcrumbList","@id":"https://uotanils.github.io/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム"}]}]}</script>
--->
 <link rel="apple-touch-icon" sizes="180x180" href="/img/ico/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/ico/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/img/ico/favicon-16x16.png">
@@ -45,23 +42,23 @@
 <meta name="msapplication-TileColor" content="#e3748c">
 <meta name="msapplication-config" content="/img/ico/browserconfig.xml">
 <meta name="theme-color" content="#e3748c">
-
+<!--og-->
 <link rel="stylesheet" href="/css/reset.css">
 <link rel="stylesheet" href="/css/dist/css-loader.css">
 <link rel="stylesheet" href="/css/style.css">
-
+<!--
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">
+-->
 <script src="/js/jquery-3.6.0.min.js"></script>
 <script>
-    //ローディング画面
+//ローディング画面
     $(window).on("load", function () { 
         $(".loader").delay(300).fadeOut(1200);
-//        $(".container").delay(600).fadeIn(1200);
     });
-</script>
-<script>
+
+//ふわっと出るリオスタ
 $(function(){
     $('.fade-layer').delay(1000).animate({
     'opacity' : '1',
@@ -72,11 +69,8 @@ $(function(){
 </head>
 
 <body>
-    <div class="loader is-active"><div class="loaderInner"><img src="/img/load_star.png" width="80" class="loader-star"></div></div>
-    <div class="container">
-    <!--
-    <div class="fade-layer"><div class="mabataki"></div></div>
-    -->
+<div class="loader is-active"><div class="loaderInner"><img src="/img/load_star.png" width="80" class="loader-star"></div></div>
+<div class="container">
     <div class="fade-layer">
         <div class="mabatakiWrapper">
             <div class="mabataki liosta1"></div>
@@ -90,6 +84,7 @@ $(function(){
             <div class="mabataki stan_hiright_wrapper"><div class="stan_hiright"></div></div>
         </div>
     </div>
+    <!-- .fade-layer -->
     <div class="starl">
         <div class="star star1"></div>
         <div class="star star2"></div>
@@ -120,18 +115,7 @@ $(function(){
         <span class="l l14"></span>
         <span class="l l15"></span>
     </div>
-<!--
-    <div class="dots">
-        <div class="dot stanWrapper">
-            <div class="dotIn stan1"><img src="/img/dot_stan1.png" alt=""></div>
-            <div class="dotIn stan2"><img src="/img/dot_stan2.png" alt=""></div>
-            <div class="dotIn stan3"><img src="/img/dot_stan3.png" alt=""></div>
-        </div>
-        <div class="dot hitsuji">
-            <div class="dotIn hitsuji"><img src="/img/dot_hitsuji.png" alt=""></div>
-        </div>
-    </div>
--->
+    <!-- .star -->
     <div class="dots">
         <div class="dot stanWrapper">
             <div class="dotIn stan0"></div>
@@ -139,11 +123,18 @@ $(function(){
             <div class="dotIn stan2"></div>
             <div class="dotIn stan3"></div>
         </div>
+        <div class="dot lionWrapper">
+            <div class="dotIn lion0"></div>
+            <div class="dotIn lion1"></div>
+            <div class="dotIn lion2"></div>
+            <div class="dotIn lion3"></div>
+        </div>
         <div class="dot hitsujiWrapper">
-<!--            <div class="dotIn hitsuji1"></div>-->
+            <!--<div class="dotIn hitsuji1"></div>-->
             <div class="dotIn hitsuji2"></div>
         </div>
     </div>
+    <!-- .dots -->
     <main>
         <header>
             <h1><img src="/img/logo.png" alt="うおたにリオスタ本部"></h1>
@@ -165,24 +156,10 @@ $(function(){
                     </ul>
                 </div>
                 <!-- .menuBox -->
-                <!--<h3>ご感想などいただけるとうれしいです！</h3>-->
-                <!--
-                <div class="dot_stan1 dot">
-                    <img src="/img/dot_stan001.gif" alt="">
-                </div>
-                -->
-                <!--
-                <div class="linkBox">
-                    <div class="btnKira">
-                        <a href="https://marshmallow-qa.com/uotanils" target="_blank" class="btn btn-gradient"><span>contact</span><span class="txts">&#9829;</span></a>
-                    </div>
-                </div>
-                -->
-                <!-- .linkBox -->
             </div>
         </section>
     </main>
-    </div>
-    <!-- .container -->
+</div>
+<!-- .container -->
 </body>
 </html>

@@ -80,7 +80,7 @@ html {
   animation-fill-mode: forwards;
 }
 /*fadeup*/
-.fade-layer, h2, section, .menuBoxWrapper, .linkBox2, .mabatakiWrapper {
+.fade-layer, h2, section, .menuBoxWrapper, .linkBox2, .mabatakiWrapper, .stanWrapper, .lionWrapper, .hitsujiWrapper {
   animation-name: fadeup;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -371,6 +371,10 @@ body {
   animation-delay: 1.5s;
 }
 */
+.stanWrapper, .lionWrapper, .hitsujiWrapper {
+  opacity: 0;
+  animation-delay: 2.5s;
+}
 .dots .stanWrapper .dotIn {
   width: 40px;
   height: 64px;
@@ -424,6 +428,26 @@ body {
   100% {opacity:0;}
 }
 */
+/**/
+.dots .lionWrapper .dotIn {
+  width: 40px;
+  height: 64px;
+  left: 13.2%;
+  bottom: 6.7%;
+  animation-duration: 2.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 1.2s;
+}
+.dots .lion1 {
+  background-image: url(/img/dot_lion2.png);
+  animation-name: dotStan1;
+}
+@keyframes dotStan1 {
+  0% {transform: translate(0px, 0px) rotate(-20deg) scale(-1, 1)}
+  50% {transform: translate(5px, -5px) rotate(-20deg) scale(-1, 1)}
+  100% {transform: translate(0px, 0px) rotate(-20deg) scale(-1, 1)}
+}
 /**/
 .dots .hitsujiWrapper .dotIn {
   width: 50px;
@@ -778,6 +802,10 @@ h2 img {
 }
 .menuBox ul li {
     margin: 0 7px;
+    transition: all 0.5s 0s ease;
+}
+.menuBox ul li:hover {
+  transform: translateY(-1vw);
 }
 .menuBox ul li img {
     height: 8vw;
@@ -938,9 +966,13 @@ a.btn-gradient:hover:after {
   animation-duration:7s;
   animation-iteration-count:infinite;
   animation-delay: 7,5s;
+  transition: all 0.5s 0s ease;
 }
 .btnStar .txts {
   font-size: 80%;
+}
+.linkBox2 .btnStar:hover {
+  opacity: 0.8;
 }
 @keyframes purupuru_anim {
 	0% {	transform: rotate(0);}
@@ -1049,11 +1081,14 @@ a.btn-gradient:hover:after {
     padding-left: 8px;
     font-size: 1.6rem;
   }
-  .dots .stanWrapper .dotIn {
+  .dots .stanWrapper .dotIn,
+  .dots .lionWrapper .dotIn {
     width: 80px;
     height: 128px;
-    left: 8%;
-    bottom: 6%;
+  }
+  .dots .lionWrapper .dotIn {
+    left: 14%;
+    bottom: 7.4%;
   }
   .dots .hitsujiWrapper .dotIn {
     width: 100px;
