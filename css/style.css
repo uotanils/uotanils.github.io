@@ -378,8 +378,8 @@ body {
 .dots .stanWrapper .dotIn {
   width: 40px;
   height: 64px;
-  left: 8%;
-  bottom: 6%;
+  left: 5%;
+  bottom: 5.5%;
   animation-duration: 2.2s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -432,7 +432,7 @@ body {
 .dots .lionWrapper .dotIn {
   width: 40px;
   height: 64px;
-  left: 14.2%;
+  left: 11.4%;
   bottom: 7.2%;
   animation-duration: 2.2s;
   animation-timing-function: ease-in-out;
