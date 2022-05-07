@@ -402,9 +402,9 @@ body {
   animation-name: dotStan1;
 }
 @keyframes dotStan1 {
-  0% {transform: translate(0px, 0px) rotate(-20deg) scale(-1, 1)}
-  50% {transform: translate(5px, -5px) rotate(-20deg) scale(-1, 1)}
-  100% {transform: translate(0px, 0px) rotate(-20deg) scale(-1, 1)}
+  0% {transform: translate(0px, 0px) rotate(-20deg)}
+  50% {transform: translate(5px, -5px) rotate(-20deg)}
+  100% {transform: translate(0px, 0px) rotate(-20deg)}
 }
 /*
 .dots .stan2 {
@@ -441,12 +441,12 @@ body {
 }
 .dots .lion1 {
   background-image: url(/img/dot_lion2.png);
-  animation-name: dotStan1;
+  animation-name: dotLion1;
 }
-@keyframes dotStan1 {
-  0% {transform: translate(0px, 0px) rotate(-20deg) scale(-1, 1)}
-  50% {transform: translate(5px, -5px) rotate(-20deg) scale(-1, 1)}
-  100% {transform: translate(0px, 0px) rotate(-20deg) scale(-1, 1)}
+@keyframes dotLion1 {
+  0% {transform: translate(0px, 0px) rotate(-20deg)}
+  50% {transform: translate(5px, -5px) rotate(-20deg)}
+  100% {transform: translate(0px, 0px) rotate(-20deg)}
 }
 /**/
 .dots .hitsujiWrapper .dotIn {
@@ -461,9 +461,9 @@ body {
   animation-delay: 1.5s;
 }
 @keyframes hitsuji {
-  0% {transform: translate(0px, 0px) scale(-1, 1)}
-  50% {transform: translate(-5px, 5px) scale(-1, 1)}
-  100% {transform: translate(0px, 0px) scale(-1, 1)}
+  0% {transform: translate(0px, 0px) rotate(-10deg) scale(-1, 1)}
+  50% {transform: translate(-5px, 5px) rotate(-10deg) scale(-1, 1)}
+  100% {transform: translate(0px, 0px) rotate(-10deg) scale(-1, 1)}
 }
 .dots .hitsuji1 {
   left: 17%;
