@@ -769,7 +769,7 @@ section {
   animation-delay: 2s;
 }
 h2 {
-  padding: 2vw;
+  padding: 0 2vw 8vw;
   text-align: center;
   opacity: 0;
   animation-delay: 2.5s;
@@ -939,8 +939,8 @@ a.btn-gradient:hover:after {
 */
 .linkBoxWrapper {
   position: absolute;
-  right: -25%;
-  bottom: 47%;
+  right: -29%;
+  bottom: -15%;
   transform: rotateZ(-10deg);
 }
 .linkBox2 {
@@ -1022,15 +1022,15 @@ a.btn-gradient:hover:after {
 */
   .menuBoxWrapper {
     width: 60%;
-    margin: 0 auto 20px;
+    margin: 0 auto;
     padding: 3vh;
   }
   .menuBox ul li img {
     height: 40px;
   }
   .linkBoxWrapper {
-    right: -90px;
-    bottom: 50px;
+    right: -110px;
+    bottom: -10px;
   }
   .linkBox2 .btnStar {
     width: 180px;
@@ -1072,8 +1072,8 @@ a.btn-gradient:hover:after {
     max-width: 400px;
   }
   .linkBoxWrapper {
-    right: -90px;
-    bottom: 50px;
+    right: -110px;
+    bottom: -20px;
   }
   .linkBox2 .btnStar {
     width: 210px;
