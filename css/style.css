@@ -1,0 +1,1128 @@
+/*
+Theme Name: うおたにリオスタ本部
+*/
+
+
+/*
+    common
+*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+.pc {
+  display: none;
+}
+
+/*
+    keyframes
+*/
+@keyframes fadein {
+  from {
+  opacity: 0;
+  }
+  to {
+  opacity: 1;
+  }
+}
+@keyframes fadeup {
+  from {
+  opacity: 0;
+  transform: translateY(20px);
+  }
+  to {
+  opacity: 1;
+  transform: translateY(0);
+  }
+}
+@keyframes fadedown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+/*
+   きらっ
+*/
+@keyframes shiny {
+  0% {
+      transform: scale(0) rotate(25deg);
+      opacity: 0;
+  }
+
+  50% {
+      transform: scale(1) rotate(25deg);
+      opacity: 1;
+  }
+
+  100% {
+      transform: scale(50) rotate(25deg);
+      opacity: 0;
+  }
+}
+
+/*fadein*/
+.stars {
+  animation-name: fadein;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+/*fadeup*/
+.fade-layer, h2, section, .menuBoxWrapper, .linkBox2, .mabatakiWrapper, .stanWrapper, .lionWrapper, .hitsujiWrapper {
+  animation-name: fadeup;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+/*fadedown*/
+h1 {
+  animation-name: fadedown;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    background-color: #E3748C;
+    background-image: url("/img/bg_border.png");
+    overflow: hidden;
+}
+
+/* ローディング画面 */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader.is-active {
+  background-color: rgba(227,116,140,1);
+}
+.loaderInner {
+  animation-name: rotate;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.loader-star {
+  animation-name: scale;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes rotate {
+  0%{transform: rotate(0);}
+  80%{transform: rotate(360deg);}
+  100%{transform: rotate(360deg);}
+}
+@keyframes scale {
+  0%{transform:scale(1);}
+  50%{transform: scale(0.7);}
+  70%{transform: scale(1);}
+  100%{transform: scale(1);}
+}
+
+/*
+   ほしきら1
+*/
+.starl {
+  overflow: hidden;
+}
+.star {
+  position : absolute;
+  width : 100%;
+  height : 100vh;
+  animation: star 2.5s ease-in infinite;
+  background-repeat: no-repeat;
+}
+.star1 {
+  background-image: url(/img/bg_star1.png);
+  background-position: 16% 3%;
+}
+.star2 {
+  background-image: url(/img/bg_star2.png);
+  background-position: 89% 14%;
+  animation-delay: .8s;
+}
+.star3 {
+  background-image: url(/img/bg_star3.png);
+  background-position: 86% 17%;
+  animation-delay: 1.7s;
+  transform: scale(-1, 1);
+}
+.star4 {
+  background-image: url(/img/bg_star3.png);
+  background-position: 80% 8%;
+  animation-delay: .5s;
+}
+.star5 {
+  background-image: url(/img/bg_star2.png);
+  background-position: 2% 57%;
+  animation-delay: .4s;
+  transform: scale(-1, 1);
+}
+.star6 {
+  background-image: url(/img/bg_star1.png);
+  background-position: -1% 73%;
+  animation-delay: .3s;
+}
+.star7 {
+  background-image: url(/img/bg_star3.png);
+  background-position: 10% 79%;
+  animation-delay: .6s;
+}
+.star8 {
+  background-image: url(/img/bg_star2.png);
+  background-position: 6% 12%;
+  animation-delay: .5s;
+}
+.star9 {
+  background-image: url(/img/bg_star1.png);
+  background-position: -2% 80%;
+  animation-delay: .8s;
+  transform: scale(-1, 1);
+}
+.star10 {
+  background-image: url(/img/bg_star4.png);
+  background-position: 87% 3%;
+  animation-delay: .1s;
+}
+.star11 {
+  background-image: url(/img/bg_star4.png);
+  background-position: -2% 8%;
+  animation-delay: 1.2s;
+  transform: scale(-1, 1);
+}
+.star12 {
+  background-image: url(/img/bg_star4.png);
+  background-position: 2% 8%;
+  animation-delay: 1.2s;
+}
+.star13 {
+  background-image: url(/img/bg_star4.png);
+  background-position: 98% 95%;
+  animation-delay: .4s;
+}
+.star14 {
+  background-image: url(/img/bg_star4.png);
+  background-position: 98% 90%;
+  animation-delay: .8s;
+  transform: scale(-1, 1);
+}
+@keyframes star {
+  10% { opacity: 0 }
+  90% { opacity: 1 }
+}
+
+
+/*
+   ほしきら2
+*/
+.container{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.stars{
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height:100%;
+}
+
+.stars span{
+  position:relative;
+}
+
+.stars span:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  
+  /*星のサイズ調節*/
+  transform:scale(0.20);
+}
+
+.stars span.s:before{
+  
+   /*20px 20pxが中央*/
+  box-shadow: 20px 20px #FFFFFF;
+}
+
+.stars span.m:before{
+  box-shadow: 
+    /*1段目*/
+    20px 10px #F6CCD5,
+    /*2段目*/
+    10px 20px #F6CCD5,
+    20px 20px #F6CCD5,
+    30px 20px #F6CCD5,
+    /*3段目*/
+    20px 30px #F6CCD5
+}
+
+.stars span.l:before{
+  box-shadow: 
+    /*0段目*/
+    20px  0px #F19FB1,
+    /*1段目*/
+    20px 10px #F6CCD5,
+    /*2段目*/
+     0px 20px #F19FB1,
+    10px 20px #F6CCD5,
+    20px 20px #F6CCD5,
+    30px 20px #F6CCD5,
+    40px 20px #F19FB1,
+    /*3段目*/
+    20px 30px #F6CCD5,
+    /*4段目*/
+    20px 40px #F19FB1;
+}
+
+
+ /*
+星の位置とアニメーション指定
+最初の秒はアニメーション時間、2つ目は開始までの時間
+*/
+.stars .s1{left:10%; top:10%; animation: star-anim 8s 0s infinite;}
+.stars .s2{left:80%; top:20%; animation: star-anim 6s 1s infinite;}
+.stars .s3{left:60%; top:40%; animation: star-anim 5s 2s infinite;}
+.stars .s4{left:20%; top:70%; animation: star-anim 7s 3s infinite;}
+.stars .s5{left:80%; top:80%; animation: star-anim 7s 4s infinite;}
+
+.stars .m6{left:40%; top:10%; animation: star-anim 4s 0s infinite;}
+.stars .m7{left:10%; top:50%; animation: star-anim 7s 1s infinite;}
+.stars .m8{left:50%; top:50%; animation: star-anim 8s 2s infinite;}
+.stars .m9{left:90%; top:90%; animation: star-anim 5s 3s infinite;}
+.stars .m10{left:80%; top:50%; animation: star-anim 7s 4s infinite;}
+
+.stars .l11{left:90%; top:10%; animation: star-anim 5s 0s infinite;}
+.stars .l12{left:10%; top:80%; animation: star-anim 6s 1s infinite;}
+.stars .l13{left:30%; top:20%; animation: star-anim 7s 2s infinite;}
+.stars .l14{left:60%; top:90%; animation: star-anim 8s 3s infinite;}
+.stars .l15{left:80%; top:50%; animation: star-anim 7s 4s infinite;}
+
+/*アニメーションキーフレーム*/
+@keyframes star-anim {
+  0% {opacity:0;}
+  5% {opacity:1;}
+  10% {opacity:0;}
+  55% {opacity:0;}
+  60% {opacity:1;}
+  95% {opacity:0;}
+  100% {opacity:1;}
+}
+
+/*
+   ほしきらend
+*/
+
+
+/*
+   ドット
+*/
+.dots {
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.dots .dot {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.dots .dotIn {
+  position: absolute;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/**/
+/*
+.dots .stanWrapper .dotIn {
+  width: 40px;
+  height: 64px;
+  left: 12%;
+  bottom: 6%;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 1.5s;
+}
+*/
+.stanWrapper, .lionWrapper, .hitsujiWrapper {
+  opacity: 0;
+  animation-delay: 2.5s;
+}
+.dots .stanWrapper .dotIn {
+  width: 40px;
+  height: 64px;
+  left: 5%;
+  bottom: 5.5%;
+  animation-duration: 2.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 1.5s;
+}
+/*
+.dots .stan1 {
+  background-image: url(/img/dot_stan1.png);
+  animation-name: dotStan1;
+}
+@keyframes dotStan1 {
+  0% {opacity:1;}
+  33% {opacity:0;}
+  66% {opacity:0;}
+  100% {opacity:1;}
+}
+*/
+.dots .stan1 {
+  background-image: url(/img/dot_stan2.png);
+  animation-name: dotStan1;
+}
+@keyframes dotStan1 {
+  0% {transform: translate(0px, 0px) rotate(-20deg)}
+  50% {transform: translate(5px, -5px) rotate(-20deg)}
+  100% {transform: translate(0px, 0px) rotate(-20deg)}
+}
+/*
+.dots .stan2 {
+  background-image: url(/img/dot_stan2.png);
+  animation-name: dotStan2;
+}
+@keyframes dotStan2 {
+  0% {opacity:0;}
+  33% {opacity:1;}
+  66% {opacity:0;}
+  100% {opacity:0;}
+}
+.dots .stan3 {
+  background-image: url(/img/dot_stan3.png);
+  animation-name: dotStan3;
+}
+@keyframes dotStan3 {
+  0% {opacity:0;}
+  33% {opacity:0;}
+  66% {opacity:1;}
+  100% {opacity:0;}
+}
+*/
+/**/
+.dots .lionWrapper .dotIn {
+  width: 40px;
+  height: 64px;
+  left: 11.4%;
+  bottom: 7.2%;
+  animation-duration: 2.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 1.2s;
+}
+.dots .lion1 {
+  background-image: url(/img/dot_lion2.png);
+  animation-name: dotLion1;
+}
+@keyframes dotLion1 {
+  0% {transform: translate(0px, 0px) rotate(-20deg)}
+  50% {transform: translate(5px, -5px) rotate(-20deg)}
+  100% {transform: translate(0px, 0px) rotate(-20deg)}
+}
+/**/
+.dots .hitsujiWrapper .dotIn {
+  width: 50px;
+  height: 35px;
+  background-image: url(/img/dot_hitsuji.png);
+  animation-name: hitsuji;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 1.5s;
+}
+@keyframes hitsuji {
+  0% {transform: translate(0px, 0px) rotate(-10deg) scale(-1, 1)}
+  50% {transform: translate(-5px, 5px) rotate(-10deg) scale(-1, 1)}
+  100% {transform: translate(0px, 0px) rotate(-10deg) scale(-1, 1)}
+}
+.dots .hitsuji1 {
+  left: 17%;
+  top: 10%;
+}
+.dots .hitsuji2 {
+  transform: scale(-1, 1);
+  right: 8%;
+  top: 8%;
+}
+
+/*
+.dotIn {
+  position: absolute;
+}
+.dot .stan1 {
+
+}
+.dot .stan2 {
+
+}
+.dot .stan3 {
+
+}
+.dot .hitsuji {
+
+}
+*/
+
+/*アニメーションキーフレーム*/
+@keyframes st {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+
+
+
+
+
+
+.fade-layer {
+  width: 100%;
+  height: 100%;
+  position : absolute;
+  z-index: -1;
+  opacity: 0;
+  animation-delay: 1s;
+}
+
+/* 複数の背景画像でアニメ　リオスタばらばらまばたき*/
+.mabatakiWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/bg_liosta1.png");
+  background-size: 160%;
+  background-repeat: no-repeat;
+  background-position: center  40%;
+  opacity: 0;
+  animation-delay: 1.5s;
+}
+.mabataki {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 160%;
+  background-repeat: no-repeat;
+  background-position: center  40%;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 1.5s;
+}
+
+/* まばたきの間　個別ver */
+.mabataki.stan1 {
+  background-image: url("/img/bg_stan1.png");
+  animation-name: stan1;
+}
+.mabataki.lion1 {
+  background-image: url("/img/bg_lion1.png");
+  animation-name: lion1;
+}
+@keyframes stan1 {
+  0% {opacity: 0;}
+
+  25% {opacity: 0;}
+  26% {opacity: 1;}
+
+  30% {opacity: 1;}
+  31% {opacity: 0;}
+  35% {opacity: 0;}
+  36% {opacity: 1;}
+  40% {opacity: 1;}
+  41% {opacity: 0;}
+
+  93% {opacity: 0;}
+  94% {opacity: 1;}
+  98% {opacity: 1;}
+  99% {opacity: 0;}
+
+  100% {opacity: 0;}
+}
+@keyframes lion1 {
+  0% {opacity: 0;}
+
+  87% {opacity: 0;}
+  88% {opacity: 1;}
+  89% {opacity: 0;}
+
+  100% {opacity: 0;}
+}
+
+.mabataki.stan2 {
+  background-image: url("/img/bg_stan2.png");
+  animation-name: stan2;
+}
+.mabataki.stan3 {
+  background-image: url("/img/bg_stan3.png");
+  animation-name: stan3;
+}
+.mabataki.stan4 {
+  background-image: url("/img/bg_stan4.png");
+  animation-name: stan4;
+}
+@keyframes stan2 {
+  0% {opacity: 0;}
+
+  25% {opacity: 0;}
+  26% {opacity: 1;}
+  27% {opacity: 0;}
+
+  29% {opacity: 0;}
+  30% {opacity: 1;}
+  31% {opacity: 0;}
+
+  35% {opacity: 0;}
+  36% {opacity: 1;}
+  37% {opacity: 0;}
+
+  39% {opacity: 0;}
+  40% {opacity: 1;}
+  41% {opacity: 0;}
+
+  39% {opacity: 0;}
+  40% {opacity: 1;}
+  41% {opacity: 0;}
+
+  93% {opacity: 0;}
+  94% {opacity: 1;}
+  95% {opacity: 0;}
+
+  98% {opacity: 1;}
+  99% {opacity: 0;}
+
+  100% {opacity: 0;}
+}
+@keyframes stan3 {
+  0% {opacity: 0;}
+
+  26% {opacity: 0;}
+  27% {opacity: 1;}
+  28% {opacity: 0;}
+  29% {opacity: 1;}
+  30% {opacity: 0;}
+
+  36% {opacity: 0;}
+  37% {opacity: 1;}
+  38% {opacity: 0;}
+  39% {opacity: 1;}
+  40% {opacity: 0;}
+
+  94% {opacity: 0;}
+  95% {opacity: 1;}
+  96% {opacity: 0;}
+  97% {opacity: 1;}
+  98% {opacity: 0;}
+  
+  100% {opacity: 0;}
+}
+@keyframes stan4 {
+  0% {opacity: 0;}
+
+  27% {opacity: 0;}
+  28% {opacity: 1;}
+  29% {opacity: 0;}
+
+  37% {opacity: 0;}
+  38% {opacity: 1;}
+  39% {opacity: 0;}
+
+  95% {opacity: 0;}
+  96% {opacity: 1;}
+  97% {opacity: 0;}
+
+  100% {opacity: 0;}
+}
+.mabataki.stan_hiright_wrapper {
+  animation-name: stan_hiright_wrapper;
+  animation-delay: 1.5s;
+}
+@keyframes stan_hiright_wrapper {
+  0% {opacity: 1;}
+
+  25% {opacity: 1;}
+  26% {opacity: 0;}
+
+  30% {opacity: 0;}
+  31% {opacity: 1;}
+  35% {opacity: 1;}
+  36% {opacity: 0;}
+  40% {opacity: 0;}
+  41% {opacity: 1;}
+
+  93% {opacity: 1;}
+  94% {opacity: 0;}
+  98% {opacity: 0;}
+  99% {opacity: 1;}
+
+  100% {opacity: 1;}
+}
+.mabataki .stan_hiright {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 160%;
+  background-repeat: no-repeat;
+  background-position: center 40%;
+  background-image: url("/img/bg_stan_hiright.png");
+  animation-name: stan_hiright;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 1.5s;
+}
+@keyframes stan_hiright {
+  0% {transform: translate(0px, 0px)}
+  50% {transform: translate(-1px, 1px)}
+  100% {transform: translate(0px, 0px)}
+}
+
+
+.mabataki.lion2 {
+  background-image: url("/img/bg_lion2.png");
+  animation-name: lion2;
+}
+.mabataki.lion3 {
+  background-image: url("/img/bg_lion3.png");
+  animation-name: lion3;
+}
+@keyframes lion2 {
+  0% {opacity: 0;}
+
+  65% {opacity: 0;}
+  66% {opacity: 1;}
+  67% {opacity: 0;}
+  68% {opacity: 1;}
+  69% {opacity: 0;}
+
+  85% {opacity: 0;}
+  86% {opacity: 1;}
+  87% {opacity: 0;}
+  88% {opacity: 1;}
+  89% {opacity: 0;}
+
+  100% {opacity: 0;}
+}
+@keyframes lion3 {
+  0% {opacity: 0;}
+
+  66% {opacity: 0;}
+  67% {opacity: 1;}
+  68% {opacity: 0;}
+
+  86% {opacity: 0;}
+  87% {opacity: 1;}
+  88% {opacity: 0;}
+
+  100% {opacity: 0;}
+}
+
+h1 {
+  padding: 2vw;
+  text-align: center;
+  opacity: 0;
+  animation-delay: 1s;
+}
+h1 img {
+  width: 20vh;
+}
+section {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-image: url(/img/footer_star.png);
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  opacity: 0;
+  animation-delay: 2s;
+}
+h2 {
+  padding: 0 2vw 4vw;
+  text-align: center;
+  opacity: 0;
+  animation-delay: 2.5s;
+}
+h2 img {
+  width: 80%;
+}
+
+/*
+    白背景
+*/
+
+.menuBoxWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 14vw;
+  padding: 4vw;
+  text-align: center;
+  opacity: 0;
+  animation-delay: 3s;
+}
+.menuBox {
+  z-index: 10;
+}
+.menuBox ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.menuBox ul li {
+    margin: 0 7px;
+    transition: all 0.5s 0s ease;
+}
+.menuBox ul li:hover {
+  transform: translateY(-1vw);
+}
+.menuBox ul li img {
+    height: 8vw;
+}
+
+
+
+/*
+    リンクボタン
+*/
+h3 {
+    margin-bottom: 10px;
+    color: #E3748C;
+    font-size: 4vw;
+    font-weight: bold;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.linkBox {
+  width: 100%;
+}
+
+.btnKira {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  overflow: hidden;
+/*  border-radius: 100vh;*/
+}
+
+a.btn-gradient::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 50px;
+  height: 50px;
+  background-image: linear-gradient(100deg,  rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 0) 0%);
+  
+  /* アニメーション */
+  animation-name: shiny;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  z-index: 1;
+}
+
+/*
+   グラデーション
+*/
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+}
+
+a.btn-gradient {
+  position: relative;
+  font-weight: normal;
+  color: #fff;
+  border-radius: 0;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(40%, #E3748C),
+    to(#562b7c)
+  );
+  background-image: -webkit-linear-gradient(left, #E3748C 40%, #562b7c 100%);
+  background-image: linear-gradient(90deg, #E3748C 40%, #562b7c 100%);
+  overflow: hidden;
+}
+
+a.btn-gradient:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#E3748C),
+    color-stop(#562b7c),
+    to(#2b86c5)
+  );
+  background-image: -webkit-linear-gradient(left, #E3748C, #562b7c, #2b86c5);
+  background-image: linear-gradient(90deg, #E3748C, #562b7c, #2b86c5);
+}
+
+a.btn-gradient span {
+  position: relative;
+  z-index: 1;
+}
+
+a.btn-gradient .txts {
+  font-size: 80%;
+}
+
+a.btn-gradient:hover {
+  color: #fff;
+}
+
+a.btn-gradient:hover:after {
+  opacity: 0;
+}
+
+/*
+   グラデーション２
+*/
+.linkBoxWrapper {
+  position: absolute;
+  right: -29%;
+  bottom: -15%;
+  transform: rotateZ(-10deg);
+}
+.linkBox2 {
+  animation-delay: 3.5s;
+  opacity: 0;
+}
+
+.linkBox2 .btnStar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vh;
+  height: 20vh;
+  padding-left: 1vw;
+  color: #ffffff;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  background-image: url(/img/btn_contact.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  animation-name: purupuru_anim;
+  animation-duration:7s;
+  animation-iteration-count:infinite;
+  animation-delay: 7,5s;
+  transition: all 0.5s 0s ease;
+}
+.btnStar .txts {
+  font-size: 80%;
+}
+.linkBox2 .btnStar:hover {
+  opacity: 0.8;
+}
+@keyframes purupuru_anim {
+	0% {	transform: rotate(0);}
+	1% {	transform: rotate(-8deg);}
+	2% {	transform: rotate(8deg);}
+	3% {	transform: rotate(-8deg);}
+	4% {	transform: rotate(8deg);}
+	5% {	transform: rotate(0);}
+	100% {	transform: translate(0, 0);}
+}
+
+
+
+
+/*
+    iPhoneSE
+*/
+@media only screen and (max-width:375px) {
+  .linkBox2 .btnStar {
+    width: 43vw;
+    height: 43vw;
+    font-size: 4vw;
+  }
+}
+/*
+    PC
+*/
+@media only screen and (min-width:441px) {
+  .pc {
+    display: block;
+  }
+  .sp {
+    display: none;
+  }
+  .mabatakiWrapper, .mabataki, .mabataki .stan_hiright {
+    background-size: cover;
+    background-position: center 4vh;
+  }
+  h2 {
+    padding: 1vh;
+  }
+  h2 img {
+    width: 40vh;
+  }
+/*
+白背景
+*/
+  .menuBoxWrapper {
+    width: 60%;
+    margin: 0 auto;
+    padding: 3vh;
+  }
+  .menuBox ul li img {
+    height: 40px;
+  }
+  .linkBoxWrapper {
+    right: -110px;
+    bottom: -10px;
+  }
+  .linkBox2 .btnStar {
+    width: 180px;
+    height: 180px;
+  }
+}
+@media only screen and (min-width:681px) {
+  section {
+    background-size: 600px;
+  }
+  .mabatakiWrapper, .mabataki, .mabataki .stan_hiright {
+    background-size: cover;
+    background-position: center 4vh;
+  }
+  .mabataki .stan_hiright {
+    animation-duration: 0.5s;
+  }
+  @keyframes stan_hiright {
+    0% {transform: translate(0px, 0px)}
+    50% {transform: translate(-2px, 2px)}
+    100% {transform: translate(0px, 0px)}
+  }
+  /*
+   グラデーション
+*/
+  .btn,
+  a.btn,
+  button.btn {
+    font-size: 1.6rem;
+    padding: 1rem 4rem;
+  }
+  section {
+    overflow: visible;
+  }
+  /*
+  白背景
+  */
+  .menuBoxWrapper {
+    max-width: 400px;
+  }
+  .linkBoxWrapper {
+    right: -110px;
+    bottom: -20px;
+  }
+  .linkBox2 .btnStar {
+    width: 210px;
+    height: 220px;
+    padding-left: 8px;
+    font-size: 1.6rem;
+  }
+  .dots .stanWrapper .dotIn,
+  .dots .lionWrapper .dotIn {
+    width: 80px;
+    height: 128px;
+  }
+  .dots .lionWrapper .dotIn {
+    left: 10.2%;
+    bottom: 8%;
+  }
+  .dots .hitsujiWrapper .dotIn {
+    width: 100px;
+    height: 70px;
+  }
+}
+
+@media only screen and (min-width:1024px) {
+  .mabatakiWrapper, .mabataki, .mabataki .stan_hiright {
+    background-size: contain;
+  }
+/*
+  ほしきら1
+*/
+  .star { position : absolute;
+    width: 860px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  .dots, .dots .dot {
+    width: 860px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
+
+
+
+
+
